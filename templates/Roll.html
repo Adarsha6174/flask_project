@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roll Number</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <style>
+        input[type='submit']{
+            cursor: pointer;
+            font-size: medium;
+            font-weight: 900;
+            border: 1px solid rgb(248, 61, 201);
+            color: white;
+            background-color: rgb(248, 61, 201);
+            margin: 5px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #box{
+            margin-top: 200px;
+            width: 450px;
+            box-shadow: 0 4px 8px 0 rgba(214, 218, 215, 0.048),0 6px 20px 0 rgb(226, 222, 230);
+            text-align: center;
+        }
+        #head{
+
+            height: 30px;
+            padding: 25px;
+            color: white;
+            background-color: rgb(248, 61, 201);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+        }
+        #login{
+            padding: 15px;
+            /* margin: 30px; */
+            background-color: white;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        body{
+            background-color: antiquewhite;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        a{ 
+            text-decoration: none;
+            border-radius: 5px;
+            padding: 20px 15px;
+            color: white;
+            background-color: rgb(248, 61, 201);
+            cursor: pointer;
+           width: 30px;
+           height: 30px;
+           position: fixed;
+           top: 5px;
+           left: 5px; 
+           /* text-align: center */
+
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <a href="/Lhome" class="fa fa-home"></a>
+    <center>
+    <div id="box">
+    <div id="head"><p><strong>Roll Number</strong></p></div>
+<center><div id="login">
+        <form action="/roll" method="post">
+            <table>
+            <tr>
+            <td><label for="a"><strong>Roll Number :</strong></label></td>
+            <td><input type="text" name="roll" id="a" required></td> 
+        </tr>    
+            
+            </table><br>
+            {% if data %}
+            <p>{{data}}</p>
+            {% endif %}
+            <input type="submit" value='Submit'>
+        </form>
+    </div>
+</center>
+    </div>
+    </center>
+</body>
+</html>

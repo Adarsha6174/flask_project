@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <style>
+        #body{
+            border: 1px black solid;
+            background-size: 100% 100%;
+            border-radius: 5px;
+            font-weight: 900;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin-top: 62px;
+            position: absolute;
+            /* box-shadow: 0 4px 8px 0 rgba(214, 218, 215, 0.048),0 6px 20px 0 rgb(226, 222, 230); */
+            width: 45%;
+            /* top: 25px; */
+        }
+        body{
+            background-color:antiquewhite;
+        }
+        #pic{
+            height: 520px;
+            /* {% if a %}
+            background-image: url('{{ url_for('static', filename='./{{a[0]}}.jpg') }}');
+            {% endif %} */
+        }
+        /* #name{
+            height: 100px;
+            background-color: azure;
+        } */
+        #body2{
+            overflow-y: auto;
+            border: 1px black solid;
+            border-radius: 5px;
+            background-color: white;
+            margin-top: 45px;
+            height: 520px;
+            position: absolute;
+            top: 25px;
+            right: 10px;
+            width: 50%;
+            /* box-shadow: 0 4px 8px 0 rgba(214, 218, 215, 0.048),0 6px 20px 0 rgb(226, 222, 230); */
+        }
+        td,tr{
+            padding: 35px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        
+        #right{
+            
+            right:10px;
+        }
+        #arr{
+        text-decoration: none;
+        border: 1px solid black;
+        border-radius: 50%;
+        background-color: rgb(236, 117, 20);
+        color: white;
+        font-size:25px;
+        padding: 10px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+    #arr:hover{
+        background-color: rgb(228, 23, 23);
+    }
+    </style>
+<body>
+    <a href="/roll" id="arr" class="fa-solid fa-arrow-left" ></a>
+    {% if a %}
+            
+    <div id="body" style="background-image: url('./static/{{a[0]}}.jpeg')">
+        <div id="pic"></div>
+        <div id="name"></div>
+    </div>{% endif %}
+    <div id="body2">
+        {% if a,roll,name,branch,mn,X,inter,mail,gen%}
+        <table>
+           <tr>
+                <td id="roll">Roll Number:{{a[0]}}</td>
+                <td id="right">Name : {{a[1]}}</td>
+            </tr>
+            <tr>
+                <td>Branch :{{a[3]}} </td>
+                <td id="right">Mobile Number : {{a[4]}}</td>
+            </tr>
+            <tr>
+                <td>X % : {{a[6]}}</td>
+                <td id="right">Inter % : {{a[7]}}</td>
+            </tr>
+            <tr>
+                <td>Mail Id:{{a[5]}}</td>
+                <td id="right">Address: -</td>
+            </tr>
+            <tr>
+                <td>Father Name: -</td>
+                <td id="right">Mother Name: -</td>
+            </tr>
+            <tr>
+                <td>Bus No: -</td>
+                <td id="right">Gender:{{a[2]}}</td>
+            </tr>           
+
+        </table>
+        {% endif %}
+    </div>
+    
+</body>
+</html>

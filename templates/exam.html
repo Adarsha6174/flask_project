@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <style>
+        #inline{
+            position: fixed;
+            bottom: 10px;
+
+        }
+        #one{
+            color: red;
+        }
+        button:hover{
+            font-weight: 900;
+            color: white;
+            background-color: rgb(178, 116, 236);
+        }
+        body{
+            padding: 15px;
+            height: 600px;
+            background-color:white;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: large;
+            box-shadow: 0 4px 8px 0 rgba(214, 218, 215, 0.048),0 6px 20px 0 rgb(226, 222, 230);
+        }
+        input[type='submit']{
+            width: 100px;
+            font-weight: 900;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            color: white;
+            background-color: rgb(19, 228, 113);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        button{
+            width: 100px;
+            font-weight: 900;
+            border-radius: 5px;
+            padding: 10px;
+            border: none;
+            background-color: black;
+            color: white;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #finish{
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: rgb(245, 152, 12);
+        }
+        #finish:hover{
+            background-color: rgb(247, 31, 31);
+
+        }
+        #exit:hover{
+            background-color: rgb(233, 58, 73);
+            color:black;
+        }
+        #exit{ 
+            text-decoration: none;
+            border-radius: 5px;
+            /* padding: 5px 2px; */
+            color: white;
+            background-color:rgb(19, 228, 113);
+            cursor: pointer;
+           width: 90px;
+           height: 36px;
+           position: fixed;
+           bottom: 10px;
+           right: 155px; 
+           text-align: center;
+           
+
+            
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        a:hover{
+            color: white;
+        }
+        #sub{
+            color: rgb(27, 233, 96);
+        }
+    </style>
+</head>
+<body>  <button id='exit' onclick='alert()'  ><a class="fa-solid fa-arrow-up-right-from-square" href="/Select"></a></button>
+        {% if ex_name %}
+        <pre>Exam : {{ex_name}}                <span id="timer"></span></pre>
+        {% endif %}
+        {% if roll,sub,ans %}
+        <pre>Mail : {{roll}}                                                         <span id="sub">Submitted : {{sub}}</span>                <span id="one">Unanswered : {{ans}}</span> </pre>
+        {% endif %}
+        {% if Question,Option,Num,Q%}
+        <table>
+            <tr>
+                <td>Question :</td> 
+                <td><p id="number">{{Num}}</p></td>
+            </tr>
+        </table>
+        <p> {{Question}}</p>
+        <form action="/score"  method="post">
+            <input type="radio" name="ans" value="a{{Q}}" id="option" required>
+            <label for="option">{{Option[0]}}</label><br>
+            <input type="radio" name="ans" value="b{{Q}}" id="option" required>
+            <label for="option">{{Option[1]}}</label><br>
+            <input type="radio" name="ans" value="c{{Q}}" id="option" required>
+            <label for="option">{{Option[2]}}</label><br>
+            <input type="radio" name="ans" value="d{{Q}}" id="option" required>
+            <label for="option">{{Option[3]}}</label><br>
+            <div id="inline">
+                <button id='pre'  ><a href="/pre"><   Previous</a></button>
+                <input   type="submit" value="Confirm">
+                <button  id='next'  ><a href='/next'>Next   ></a></button>
+                <button id="finish" ><a href='/finish'>Finish</a></button>
+            </div>
+        </form>
+
+        {% endif %}
+        <script>
+                function number(){
+                   var a=document.getElementById('number').innerHTML
+                //    document.getElementById('sub').submit()
+                   if (a=='20'){
+                        document.getElementById('next').style.display='none'
+                   }
+                   if (a=='1'){
+                        document.getElementById('pre').style.display='none'
+                   }
+                }
+                // function submit(){
+                //     document.getElementById('sub').submit()
+                // }
+                function alert(){
+                    alert('This could terminate your exam')
+                }
+                
+                window.onload=number
+        </script>
+</body>
+</html>

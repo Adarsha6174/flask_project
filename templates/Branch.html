@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose</title>
+    <style>
+        input[type='submit']{
+            cursor: pointer;
+            font-size: medium;
+            font-weight: 900;
+            border: 1px solid rgb(62, 200, 241);
+            color: white;
+            background-color: rgb(62, 200, 241);
+            margin: 5px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #box{
+            margin-top: 200px;
+            width: 450px;
+            box-shadow: 0 4px 8px 0 rgba(214, 218, 215, 0.048),0 6px 20px 0 rgb(226, 222, 230);
+            text-align: center;
+        }
+        #head{
+
+            height: 30px;
+            padding: 25px;
+            color: white;
+            background-color: rgb(62, 200, 241);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+        }
+
+        #login{
+            padding: 15px;
+            list-style-type: none;
+            background-color: white;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        li{ cursor: pointer;
+            list-style-type: none;
+            display: inline;
+            
+        }
+        #arr{
+        text-decoration: none;
+        border: 1px solid black;
+        border-radius: 50%;
+        background-color: rgb(236, 117, 20);
+        color: white;
+        font-size:25px;
+        padding: 10px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+    #arr:hover{
+        background-color: rgb(228, 23, 23);
+    }
+        
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+<body>
+    <a href="/Lhome" id="arr" class="fa-solid fa-arrow-left" ></a>
+    <center>
+    <div id="box">
+    <div id="head"><p><strong>Choose Domain</strong></p></div>
+    <center><div id="login">
+        <form action="/branch" method="post">
+            Select Date : <input type="date" name="date" id="a"  required><br>
+        <table>
+            <tr>
+        <td><input type="radio" name="type" id="a" value="cse" required></td>
+        <td><label for="a"><strong>CSE</strong></label></td>
+        </tr><tr></tr>
+        <tr>
+        <td><input type="radio" name="type" id="a" value="ece" required></td>
+        <td><label for="a"><strong>ECE</strong></label></td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="type" id="a" value="it" required></td>
+            <td><label for="a"><strong>IT</strong></label></td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="type" id="a" value="iot" required></td>
+            <td><label for="a"><strong>IOT</strong></label></td>
+        </tr>
+        <tr>
+            <!-- <td><label for="a"><strong>IOT</strong></label></td> -->
+            <!-- <input type="date" name="date" id="a"  required> -->
+            <!-- <td><label for="a"><strong>IOT</strong></label></td> -->
+        </tr>
+        </table><br>
+    </div>
+    
+    <input type="submit" value='Submit'>
+</form>
+</center>
+    </div>
+    </center>
+</body>
+</html>

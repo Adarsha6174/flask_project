@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <style>
+        #body1{
+            font-size: larger;
+            font-weight: 900;
+            padding: 20px;
+            color:rgb(238, 24, 52);
+            position: absolute;
+            top: 20px;
+            left: 10px;
+            border: 1px black solid;
+            height: 480px;
+            border-radius: 5px;
+            margin-top: 45px;
+            width: 45%;
+            background-color: white;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        body{
+         background-color:antiquewhite; 
+         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        
+        #body2{
+            /* overflow: scroll; */
+            overflow-y: scroll;
+            border: 1px black solid;
+            border-radius: 5px;
+            background-color: white;
+            margin-top: 45px;
+            min-height: 520px;
+            position: absolute;
+            top: 20px;
+            right: 10px;
+            width: 50%;
+            /* box-shadow: 0 4px 8px 0 rgba(214, 218, 215, 0.048),0 6px 20px 0 rgb(226, 222, 230); */
+        }
+        th,td,tr{
+            padding: 20px;
+            font-size: 15px;
+            font-weight: bold;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        
+        #right{
+            
+            right:10px;
+        }
+        th{
+            color: rgb(228, 19, 29);
+        }
+        td{
+            color: rgba(23, 68, 218, 0.925);
+        }
+        
+        #pie{
+            height:400px;
+            width: 400px;
+            border-radius: 50%;
+            /* background-image: conic-gradient(at {{present}} {{absent}} , pink , green )  */
+
+        }
+    #arr{
+        text-decoration: none;
+        border: 1px solid black;
+        border-radius: 50%;
+        background-color: orange;
+        color: white;
+        font-size:25px;
+        padding: 10px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+    #arr:hover{
+        background-color: rgb(228, 23, 23);
+    }
+    </style>
+
+<body><center>
+    <a href="/Shome" id="arr" class="fa-solid fa-arrow-left" aria-hidden="true"></a>
+    <div id="body1">
+    {% if message,conic %}
+    <div id="pie" style="background-image: {{conic}}; " ></div>
+    <p>{{message}}</p>
+    {% endif %}
+    </div>
+    </center>
+    <div id="body2">
+        <center>
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Status</th>
+                </tr>
+        {% for comp in comp %}
+           <tr>
+                <td id="roll">{{comp[0]}}</td>
+                <td id="right">{{comp[1]}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    </center>
+    </div>
+    
+</body>
+</html>

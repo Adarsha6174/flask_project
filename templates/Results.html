@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <style>
+    th{
+        color:rgb(241, 95, 9);
+    } 
+    td{
+        text-align: center;
+        color: rgb(28, 133, 224);
+    }
+    body{
+        background-color:aliceblue;
+    }
+    table{
+        margin-top: 30px;
+        width: 600px;
+    }
+    table,th,td{
+        border: 2px solid rgb(51, 54, 51);
+        border-collapse: collapse;
+        font-weight: 900;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    li:hover{
+        background-color: rgb(212, 20, 20);
+        color: white;
+    }
+    li{ 
+        /* border-collapse: collapse; */
+        cursor: pointer;
+        /* background-color: white; */
+        display: inline;
+        text-decoration: none;
+        padding: 30px;
+        font-size: large;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    a:hover{
+        color: white;
+    }
+    a{
+        /* background-color: white; */
+        text-decoration: none;
+        color: black;
+    }
+    ul{
+        width: fit-content;
+        background-color:rgb(240, 231, 110);
+        padding: 30px;
+    }
+    #up:hover{
+        color: white;
+        background-color: rgb(221, 27, 27);
+    }
+    #up{
+        background-color: rgb(221, 157, 19);
+        border: 2px solid rgb(80, 76, 76);
+        padding: 15px;
+        border-radius: 100%;
+        font-size: 30px;
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+
+    }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+<body>
+    <a id="up" href="#ul" class="fa-solid fa-arrow-up"></a>
+<center>
+    <ul id="ul">
+        <!-- <a href="/Shome" class="fa fa-home"></a> -->
+        <li ><a href="/Shome" class="fa fa-home"></a></li>
+        <li ><a href="#c1">Sem-1</a></li>
+        <li ><a href="#c2">Sem-2</a></li>
+        <li ><a href="#c3">Sem-3</a></li>
+        <li ><a href="#c4">Sem-4</a></li>
+        <li ><a href="#c5">Sem-5</a></li>
+        <li ><a href="#c6">Sem-6</a></li>
+        <li ><a href="#">Sem-7</a></li>
+        <li ><a href="#">Sem-8</a></li>
+    </ul>
+</center>
+    <center>
+    {% if Roll%}
+    <table id="c1">
+        <tr>
+            <th>Hall Ticket Number</th>
+            <th>Semister</th>
+            <th>Course Name</th>
+            <th>Grade</th>
+            <th>Result</th>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>1</td>
+            <td>Enlish-1</td>
+            <td>S</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>1</td>
+            <td>Maths-1</td>
+            <td>A</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>1</td>
+            <td>Applied Physics</td>
+            <td>A</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>1</td>
+            <td>C - programming</td>
+            <td>A</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>1</td>
+            <td>Engineering Graphics</td>
+            <td>A</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>1</td>
+            <td>ELCS Lab</td>
+            <td>S</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>1</td>
+            <td>Physics Lab</td>
+            <td>A</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>1</td>
+            <td>C programming Lab</td>
+            <td>A</td>
+            <td>Pass</td>
+        </tr>
+    </table>
+    <table id="c2">
+        <tr>
+            <th>Hall Ticket Number</th>
+            <th>Semister</th>
+            <th>Course Name</th>
+            <th>Grade</th>
+            <th>Result</th>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>2</td>
+            <td>Enlish-2</td>
+            <td>S</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>2</td>
+            <td>Maths-2</td>
+            <td>A</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>2</td>
+            <td>Applied Chemistry</td>
+            <td>A</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>2</td>
+            <td>Python - programming</td>
+            <td>A</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>2</td>
+            <td>BEEE</td>
+            <td>A</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>2</td>
+            <td>BEEE Lab</td>
+            <td>S</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>2</td>
+            <td>Chemistry Lab</td>
+            <td>A</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>2</td>
+            <td>Python programming Lab</td>
+            <td>A</td>
+            <td>Pass</td>
+        </tr>
+    </table>
+    <table id="c3">
+        <tr>
+            <th>Hall Ticket Number</th>
+            <th>Semister</th>
+            <th>Course Name</th>
+            <th>Grade</th>
+            <th>Result</th>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>3</td>
+            <td>Maths-3</td>
+            <td>S</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>3</td>
+            <td>Data Structures</td>
+            <td>A</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>3</td>
+            <td>DLD</td>
+            <td>A</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>3</td>
+            <td>Java - programming</td>
+            <td>A</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>3</td>
+            <td>FOSS</td>
+            <td>A</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>3</td>
+            <td>DLD Lab</td>
+            <td>S</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>3</td>
+            <td>Data Structures Lab</td>
+            <td>A</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>3</td>
+            <td>Java programming Lab</td>
+            <td>A</td>
+            <td>Pass</td>
+        </tr>
+    </table>
+    <table id="c4">
+        <tr>
+            <th>Hall Ticket Number</th>
+            <th>Semister</th>
+            <th>Course Name</th>
+            <th>Grade</th>
+            <th>Result</th>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>4</td>
+            <td>MFCS</td>
+            <td>S</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>4</td>
+            <td>Computer Organization</td>
+            <td>A</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>4</td>
+            <td>DBMS</td>
+            <td>A</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>4</td>
+            <td>Software Engineering</td>
+            <td>A</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>4</td>
+            <td>ISS</td>
+            <td>A</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>4</td>
+            <td>Linux Lab</td>
+            <td>S</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>4</td>
+            <td>DBMS Lab</td>
+            <td>A</td>
+            <td>Pass</td>
+        </tr>
+    </table>
+    <table id="c5">
+        <tr>
+            <th>Hall Ticket Number</th>
+            <th>Semister</th>
+            <th>Course Name</th>
+            <th>Grade</th>
+            <th>Result</th>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>5</td>
+            <td>Computer Networks</td>
+            <td>S</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>5</td>
+            <td>Operating Systems</td>
+            <td>A</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>5</td>
+            <td>AIML</td>
+            <td>A</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>5</td>
+            <td>Data Warehousing & Data Mining</td>
+            <td>A</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>5</td>
+            <td>Management Sciences</td>
+            <td>A</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>5</td>
+            <td>CN & OS Lab</td>
+            <td>S</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>5</td>
+            <td>AIML Lab</td>
+            <td>A</td>
+            <td>Pass</td>
+        </tr>
+    </table>
+    <table id="c6">
+        <tr>
+            <th>Hall Ticket Number</th>
+            <th>Semister</th>
+            <th>Course Name</th>
+            <th>Grade</th>
+            <th>Result</th>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>6</td>
+            <td>Hadoop and Big Data</td>
+            <td>S</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>6</td>
+            <td>Web Technologies</td>
+            <td>A</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>6</td>
+            <td>DAA</td>
+            <td>A</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>6</td>
+            <td>Cryptography and Network Security</td>
+            <td>A</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>6</td>
+            <td>HBD Lab</td>
+            <td>S</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>6</td>
+            <td>Web Technologies Lab</td>
+            <td>A</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>{{Roll}}</td>
+            <td>6</td>
+            <td>MEFA</td>
+            <td>A</td>
+            <td>Pass</td>
+        </tr>
+    </table>
+    {% endif %}
+</center>
+</body>
+</html>

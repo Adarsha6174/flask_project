@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="home.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <style>a{
+
+        /* display: inline; */
+        text-decoration: none;
+        color:black;
+        
+        
+    
+    }
+    a:hover{color:white}
+    ul{
+        margin: 0;
+        padding: 0;
+    }
+    #list:hover{
+        color:white;
+        
+        background-color:rgb(19, 228, 113);
+    }
+    #back{
+        
+        
+        list-style-type: none;
+        font-size: larger;
+        /* display :block; */
+        width:150px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        
+    
+    
+    }
+     body{background-image: url('{{ url_for('static', filename='./sadguru2.jfif') }}'); 
+           background-repeat: no-repeat;
+           /* background-image: url('./wallpaper-964.jfif'); */
+        background-size: 100% 100%;
+        height: 600px;
+    /* background-position: right top; */
+    background-color: rgb(156, 119, 71);}
+    #body{
+        width: 150px;
+        box-shadow: 0 4px 8px 0 rgba(214, 218, 215, 0.048),0 6px 20px 0 rgb(226, 222, 230);
+    }
+    
+    #list{
+        /* border-radius: 5px 5px; */
+        padding: 20px 15px;
+        width: 150px;
+        background-color: white;
+        
+    }
+    #quote{
+        font-size: large;
+
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        width:fit-content;
+        max-width: 850px;
+        /* padding: 10px; */
+        box-shadow: 0 4px 8px 0 rgba(214, 218, 215, 0.048),0 6px 20px 0 rgb(226, 222, 230);
+        background-color: white;
+    }
+    #top{
+        /* background-color: white; */
+        padding: 10px;
+    }
+    #sign{
+        background-color: rgb(19, 228, 113);
+        padding: 10px;
+        text-align: right;
+    }
+    .drop:hover .drop-content{
+        display: block;
+    }
+    .drop-content{
+        display: none;
+        padding: 20px 15px;
+        width: 150px;
+        background-color: rgb(207, 245, 37);
+        z-index: 1;
+    }
+    </style>
+    <title>Document</title>
+    
+    <script>
+    setInterval(abc,5000)
+    var num=1
+    function abc(){
+        
+        
+        num++
+    if (num>5){
+        num=1
+    }
+    // if(num==2){
+    //     document.body.style.backgroundImage="url('./sadguru/isha1.jfif')"
+    // }
+    // if(num==3){
+    //     document.body.style.backgroundImage="url('./sadguru/sadguru102.jpg')"
+    // }
+    if(num==1){
+        document.body.style.backgroundImage="url('{{ url_for('static', filename='./sadguru2.jfif') }}')"
+    }
+    if(num==4){
+        document.body.style.backgroundImage="url('{{ url_for('static', filename='./sadguru4.jfif') }}')"
+    }
+    // if(num==5){
+    //     document.body.style.backgroundImage="url('./sadguru/isha2.jfif')"
+    // }
+}
+        </script>
+</head>
+<body>
+    <div id="body">
+    <ul id="back">
+        <div class="drop">
+        <li id ='list' class="fa-solid fa-bars"><a ></a></li> 
+        <div class='drop-content'>
+            <li  ><a href="/signout" class="fa fa-sign-out"></a></li> 
+        </div>   
+        </div>
+        <li id="list"><a href="/Select">Exam</a></li>
+        <li id="list"><a href="/result">Result</a></li>
+        <li id="list"><a href="/register">Attendence</a></li>
+       
+        
+    </ul>
+</div>
+<!-- <div id="quote">
+{% if Quote%}
+<div id="top">
+<p >{{Quote}}</p>
+{% endif %}
+</div>
+<div id="sign">
+<p >Sadguru</p>
+</div>
+</div> -->
+</body>
+</html>

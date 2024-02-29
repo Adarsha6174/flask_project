@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <title>Student Login</title>
+    <style>
+        input[type='submit']{
+            cursor: pointer;
+            font-size: medium;
+            font-weight: 900;
+            border: 1px solid rgb(19, 228, 113);
+            color: white;
+            background-color: rgb(19, 228, 113);
+            margin: 5px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #box{
+            margin-top: 200px;
+            width: 450px;
+            box-shadow: 0 4px 8px 0 rgba(214, 218, 215, 0.048),0 6px 20px 0 rgb(226, 222, 230);
+            text-align: center;
+        }
+        #head{
+
+            height: 30px;
+            padding: 25px;
+            color: aliceblue;
+            background-color: rgb(19, 228, 113);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+        }
+        #login{
+            padding: 15px;
+            /* margin: 30px; */
+            background-color:white;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        a{
+            color: red;
+            text-decoration: none;        }
+        body{
+            background-color: rgb(223, 184, 132);
+        }
+        
+    </style>
+</head>
+<body><center>
+    <div id="box">
+    <div id="head"><p><strong>Student Login Page</strong></p></div>
+<center><div id="login">
+        <form action="Slogin" method="post">
+            <table>
+                <tr>
+            <td><label for="a"><strong>Enter Email :</strong></label></td>
+            <td><input type="email" name="username" id="a" required></td>
+            </tr><tr></tr>
+            <tr>
+            <td><label for="a"><strong>Enter Password  :</strong></label></td>
+            <td><input type="password" name="password" id="a" required></td>
+            </tr>
+            </table><br>
+            {% if message%}
+            
+                <p>{{message}}</p>
+            
+            {% endif %}
+            <input type="submit" value='Login'>
+            <p><a id="for" href="/mail">forgot password?</a></p>
+        </form>
+    </div>
+</center>
+    </div>
+    </center>
+</body>
+</html>

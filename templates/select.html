@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Subject</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <style>
+        input[type='submit']{
+            cursor: pointer;
+            font-size: medium;
+            font-weight: 900;
+            border: 1px solid rgb(19, 228, 113);
+            color: white;
+            background-color: rgb(19, 228, 113);
+            margin: 5px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #box{
+            margin-top: 200px;
+            width: 450px;
+            box-shadow: 0 4px 8px 0 rgba(214, 218, 215, 0.048),0 6px 20px 0 rgb(226, 222, 230);
+            text-align: center;
+        }
+        #head{
+
+            height: 30px;
+            padding: 25px;
+            color: aliceblue;
+            background-color: rgb(19, 228, 113);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+        }
+
+        #login{
+            padding: 15px;
+            list-style-type: none;
+            background-color: white;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        a:hover{
+            background-color:rgb(19, 228, 113) ;
+            color:black;
+        }
+        body{
+            background-color: antiquewhite;
+        }
+
+        a{ 
+            text-decoration: none;
+            border-radius: 5px;
+            padding: 20px 15px;
+            color: white;
+            background-color: rgb(19, 228, 113);
+            cursor: pointer;
+           width: 30px;
+           height: 30px;
+           position: fixed;
+           top: 5px;
+           left: 5px; 
+           /* text-align: center */
+
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <a href="/Shome" class="fa fa-home"></a>
+    <center>
+    <div id="box">
+    <div id="head"><p><strong>Choose Subject</strong></p></div>
+    <center><div id="login">
+        <form action="/Exam" method="post">
+        <table>
+            <tr>
+        <td><input type="radio" name="option" id="a" value="1" required></td>
+        <td><label for="option"><strong>C</strong></label></td>
+        </tr><tr></tr>
+        <tr>
+        <td><input type="radio" name="option" id="a" value="2" required></td>
+        <td><label for="option"><strong>Java Script</strong></label></td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="option" id="a" value="3" required></td>
+            <td><label for="option"><strong>Java</strong></label></td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="option" id="a" value="4" required></td>
+                <td><label for="option"><strong>Python</strong></label></td>
+                </tr>
+        
+        </table>
+        <input type="submit" value='Start'>
+        </form>
+    </div>
+</center>
+    </div>
+    </center>
+</body>
+</html>
